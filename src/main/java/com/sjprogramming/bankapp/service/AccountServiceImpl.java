@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import com.sjprogramming.bankapp.entity.Account;
 import com.sjprogramming.bankapp.repo.AccountRepository;
 
-@Service // ضروري جداً لكي يتعرف Spring Boot على الخدمة
+@Service
 public class AccountServiceImpl implements AccountService {
 
     @Autowired
@@ -17,7 +17,6 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public Account createAccount(Account account) {
-        // حفظ الحساب في قاعدة البيانات
         return repo.save(account);
     }
 
